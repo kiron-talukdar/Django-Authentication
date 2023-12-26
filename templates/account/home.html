@@ -1,0 +1,18 @@
+{% extends "account/base.html" %}
+{% block title %} Home{% endblock title %}
+{% block content %}
+<div class="container">
+    <div class="row py-4">
+        <div class="col-md-12 my-2">
+            <h4>Welcome {{request.user.username}}</h4>
+        </div>
+        <div class="col-md-12 my-2">
+           <a href="{% url "changepassword" %}">Change Password</a>
+        </div>
+        <div class="col-md-12 my-2">
+            <a href="{% url "logout" %}">Logout</a>
+         </div>
+    </div>
+</div>
+    <h2>Hello</h2>
+{% endblock content %}
